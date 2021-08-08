@@ -75,6 +75,8 @@ void merge1(vi &a,int start ,int end ){
 	cout<<"final : ";Show(final);cout<<" ; "<<endl;
 
 }
+
+
 void merge(vi &a,int start ,int end ){
 	if(start + 1 >=end ) return ;
 	int mid = start + (end - start) /2 ;  
@@ -122,31 +124,44 @@ void mergesort(vi &a,int start ,int end ){ // end not included
 	merge(a,start ,end) ; 
 }
 
+void mergesort_iter(vi &a,int start ,int end ){
+	for(int m = 1 ; m <=  end - start ; m *=2  ){
+		for(int i = start;  i <= end   ; i +=2*m ){
+			merge(a,i,min(i + 2*m  ,end )) ; 
+		}
+	}
+}
+
 void solve(){
 	vi a;
 	int n ; 
 	cin>>n ;
+	    srand(time(NULL));
+ 
+ 
 	fr(i,n){
-		int k ; 
-		cin>>k ;
+		int k = rand() %50 ; 
+		// cin>>k ;
 		a.pb(k) ; 
 	}
-	// Show(a);cout<<endl;
+	
+cout<<"Original array : ";	Show(a);cout<<endl;
 
-	mergesort(a,0,a.size()); 
-	Show(a);cout<<endl;
+	mergesort_iter(a,0,a.size()); 
+	cout<<"Sorted Array : ";Show(a);cout<<endl;
 }
 
 int main()
 {
-   ios_base::sync_with_stdio(false);cin.tie(NULL);
+      ios_base::sync_with_stdio(false);cin.tie(NULL);
  
-    
+        
    #ifndef ONLINE_JUDGE
-   freopen("input.txt", "r", stdin);
-   freopen("error.txt", "w", stderr);
-   freopen("output.txt", "w", stdout);
+   freopen("/home/sriram/Coding-files/codeforces/input.txt", "r", stdin);
+   freopen("/home/sriram/Coding-files/codeforces/error.txt", "w", stderr);
+   freopen("/home/sriram/Coding-files/codeforces/output.txt", "w", stdout);
    #endif
+
 
     int tc;
     //scanf("%d", &tc) ; 
@@ -161,14 +176,21 @@ int main()
 
 
 
+/*
+2
+5
+3 7 4 1 6 
+3
+1 3 2
+5
+47 10 28 12 6 
+3
+44 49 38 
+3
+47 10 28
 
 
-
-
-
-
-
-
+*/
 
 
 
