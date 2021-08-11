@@ -136,9 +136,8 @@ void solve(){
 	vi a;
 	int n ; 
 	cin>>n ;
-	    srand(time(NULL));
- 
- 
+	 srand(time(NULL));
+
 	fr(i,n){
 		int k = rand() %50 ; 
 		// cin>>k ;
@@ -157,9 +156,9 @@ int main()
  
         
    #ifndef ONLINE_JUDGE
-   freopen("/home/sriram/Coding-files/codeforces/input.txt", "r", stdin);
-   freopen("/home/sriram/Coding-files/codeforces/error.txt", "w", stderr);
-   freopen("/home/sriram/Coding-files/codeforces/output.txt", "w", stdout);
+   freopen("/home/sriram/Coding-files/codeforces/in", "r", stdin);
+   freopen("/home/sriram/Coding-files/codeforces/err", "w", stderr);
+   freopen("/home/sriram/Coding-files/codeforces/out", "w", stdout);
    #endif
 
 
