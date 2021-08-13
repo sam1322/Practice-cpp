@@ -43,7 +43,7 @@ void DFS(int u , vector<vector<int>> &adj,vector<int> &disc, vector<int> &low,ve
 			{
 				ap[u] = true ; 
 			}
-			if(parent[u]!=-1 && low[v]>=disc[u]){ // Case 2 : U is not root 
+			if(parent[u]!=-1 && low[v]>=disc[u]){ // Case 2 : U is not root and atleast 1 component will be separated 
 				ap[u] = true ; 
 			}
 
