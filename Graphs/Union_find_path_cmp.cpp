@@ -57,16 +57,8 @@ int find(vector<int> &parents,vector<int> &rank , int v){
 	// return g.parents[v] ; 
 }
 
-
-bool isCyclic(vector<int> &parents,vector<int> &rank ,vector<vector<int>> &Edges){
-	for(auto &x:Edges){
-		int a = find(parents,rank,x[0]) ;
-		int b = find(parents,rank ,x[1]) ;
-		if(a==b){
-			return true ; 
-		}
- // union operation
-		if(rank[a] > rank[b])  {
+void Union(vector<int> &parents,vector<int> &rank,int a,int b ){
+	if(rank[a] > rank[b])  {
 			parents[b] = a ;
 		}
 		else if(rank[a] < rank[b] ){
@@ -76,6 +68,17 @@ bool isCyclic(vector<int> &parents,vector<int> &rank ,vector<vector<int>> &Edges
 			parents[a] = b   ;
 			rank[b]++ ;
 		}
+}
+
+bool isCyclic(vector<int> &parents,vector<int> &rank ,vector<vector<int>> &Edges){
+	for(auto &x:Edges){
+		int a = find(parents,rank,x[0]) ;
+		int b = find(parents,rank ,x[1]) ;
+		if(a==b){
+			return true ; 
+		}
+ // union operation
+		Union(parents,rank,a,b) ; 
 
 	}
 	return false ;
