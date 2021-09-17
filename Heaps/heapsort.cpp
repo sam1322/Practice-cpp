@@ -24,7 +24,7 @@ typedef long long  ll;
 typedef pair<int,int> pii; 
 
 
-	void heapify2(vi &v , int i , int n ){
+	void heapify2(vi &v , int i , int n {
 		int  left,right;
 		left = 2*i+1 ; 
 		right= 2*i + 2 ; 
@@ -46,7 +46,7 @@ typedef pair<int,int> pii;
 
 	}
 
-void heapify1(vi &v , int i , int n ){
+void heapify1(vi &v , int i , int n{
 		int left,right;
 		left = 2*i+1 ; 
 		right= 2*i + 2 ; 
@@ -65,7 +65,7 @@ void heapify1(vi &v , int i , int n ){
 		}
 	}
 
-void heapify(vi &v,int i, int n ){
+void heapify(vi &v,int i, int n  ){
 		int left , right , max = i ; 
 		left = 2*i +1;
 		right = 2*i + 2 ;
@@ -84,7 +84,8 @@ void heapify(vi &v,int i, int n ){
 void heapsort(vi &a){
 	int n = a.size() ; 
 	for(int i = n/2 - 1 ; i >= 0 ; --i){
-		heapify(a,i,n) ;
+		// heapify(a,i,n) ;
+		heapify(a,i,a.size()) ;
 		// heapify2(a,i ,n) ;
 		Show(a);
 		cout<<endl;
