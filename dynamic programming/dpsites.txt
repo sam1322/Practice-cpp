@@ -1,0 +1,17 @@
+https://codeforces.com/blog/entry/43256
+
+https://www.quora.com/How-can-one-start-solving-dynamic-programming-problems
+
+
+https://codeforces.com/blog/entry/70018
+
+https://www.quora.com/What-are-the-best-ways-to-master-dynamic-programming
+
+https://leetcode.com/problems/word-break/discuss/?currentPage=1&orderBy=hot&query=
+
+https://www.geeksforgeeks.org/word-break-problem-dp-32/
+
+https://leetcode.com/discuss/general-discussion/849681/How-to-approach-DP-problems
+
+
+https://www.geeksforgeeks.org/union-find/
